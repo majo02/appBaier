@@ -1,4 +1,4 @@
-//import 'package:appbaier2/pagBuscadosVoz.dart';
+import 'package:appbaier2/pagBuscadosVoz.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:flutter/material.dart';
@@ -53,9 +53,9 @@ class _BuscarPorVozState extends State<BuscarPorVoz>{
       _speech.listen( //Para que se empiece a escuchar
         onResult: (val) => setState((){ //Se activa cada vez que se escuchan nuevas palabras
           _text = val.recognizedWords;
-          /*Navigator.push( 
+          Navigator.push( 
                     context,
-                    MaterialPageRoute(builder: (context) => PantallaBuscadosVoz(alimentoAmostrarNombre: _text))); //Clase con los alimentos*/
+                    MaterialPageRoute(builder: (context) => PantallaBuscadosVoz(alimentoAmostrarNombre: _text))); //Clase con los alimentos
           
         }),
       );
